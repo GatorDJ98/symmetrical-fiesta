@@ -30,7 +30,7 @@ function generateCoolNameFacts(userName) {
     coolFacts = nameLength(userName);
     coolFacts += " <br> " + nameStart(userName);
     coolFacts += "<h3> " + nameEnd(userName) + "</h3>";
-    coolFacts += "<h2>" + reverseName(userName) + "</h2>"
+    coolFacts += " <br> " + getSpiritAnimal(userName);
 
     console.log("initialized the'm coolFacts variable: " + coolFacts);
 
@@ -52,10 +52,19 @@ function nameEnd(name) {
     return "the last letter of your name is " + name[lastIndex]
 }
 
-function reverseName(name) {
 
-    let arrName = name.split();
 
-    revName = arrName.reverse();
+function getSpiritAnimal(name) {
+
+    var SpiritAnimals = [
+        'Tiger',
+        'Lion',
+        'Whale',
+        'Deer'
+    ]
+    let myanimal = SpiritAnimals[Math.floor(Math.random() * SpiritAnimals.length)]
+
+    return "Your spirit animal is " + myanimal
+
 
 }
